@@ -1,66 +1,39 @@
-import React from "react";
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 
-const App = () => {
-  const expenses = [
-    {
-      id: "e1",
-      title: "truck insurance",
-      amount: 4444,
-      date: new Date(2022, 2, 28),
-    },
-    {
-      id: "e2",
-      title: "bike insurance",
-      amount: 5555,
-      date: new Date(2023, 3, 28),
-    },
-    {
-      id: "e3",
-      title: "car insurance",
-      amount: 6666,
-      date: new Date(2024, 4, 28),
-    },
-    {
-      id: "e4",
-      title: "Bus insurance",
-      amount: 6666,
-      date: new Date(2024, 5, 28),
-    },
+function App() {
+  const expense = [
+    { title: "Car Insurance edit", amount: 343, date: new Date(2022, 5, 4) },
+    { title: "Bike Insurance", amount: 3443, date: new Date(2022, 6, 7) },
+    { title: "Train Insurance", amount: 3453, date: new Date(2022, 7, 10) },
+    { title: "AirBus Insurance", amount: 3463, date: new Date() },
   ];
   return (
     <div>
-      <h2>HELLO, SHIBU WHERE YOU GO</h2>
-      <p>HI, MY NAME IS SHIVA CHAPAGAIN FROM PARBAT.</p>
       <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-      />
+        title={expense[0].title}
+        amount={expense[0].amount}
+        date={expense[0].date}
+      ></ExpenseItem>
+
       <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      />
+        title={expense[1].title}
+        amount={expense[1].amount}
+        date={expense[1].date}
+      ></ExpenseItem>
+
       <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-      />
+        title={expense[2].title}
+        amount={expense[2].amount}
+        date={expense[2].date}
+      ></ExpenseItem>
+
       <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
-      />
+        title={expense[3].title}
+        amount={expense[3].amount}
+        date={expense[3].date}
+      ></ExpenseItem>
     </div>
   );
-};
-
-// return (
-//   <div>
-//     <h2>Let's gets started</h2>
-//     <Expenses item={expenses}/>
-//   </div>
-// );
+}
 
 export default App;
