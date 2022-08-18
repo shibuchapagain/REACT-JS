@@ -1,5 +1,6 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
-
+import NewExpense from "./components/NewExpense/NewExpense";
+import ExpenseForm from "./components/NewExpense/ExpenseForm";
 function App() {
   const expense = [
     { title: "Car Insurance edit", amount: 343, date: new Date(2022, 5, 4) },
@@ -7,8 +8,21 @@ function App() {
     { title: "Train Insurance", amount: 3453, date: new Date(2022, 7, 10) },
     { title: "AirBus Insurance", amount: 3463, date: new Date() },
   ];
+
+  // return (
+  //   <div>
+  //     <NewExpense />
+  //   </div>
+  // );
+
+  const addExpenseHandler = (expense) => {
+    console.log("IN APP.JS");
+    console.log(expense);
+  };
+
   return (
     <div>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <ExpenseItem
         title={expense[0].title}
         amount={expense[0].amount}
